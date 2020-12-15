@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
 body, html {
   box-sizing: border-box;
   padding: 0;
@@ -41,6 +43,47 @@ section:not(:last-of-type)::after {
   background: url('data:image/svg+xml;utf8,<svg opacity="0.15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15" width="160" height="150"><g transform="translate(1 1)" stroke-width="2" stroke="%23ffc928" stroke-linecap="round" stroke-linejoin="round" fill="%23ffc928"><path d="M 0 4.5 l 4.5 0 l 2.5 -4.5 l 2.5 4.5 l 4.5 0 l -3.5 3.5 l 1.5 5 l -5 -2.5 l -5 2.5 l 1.5 -5 l -3.5 -3.5"></path></g></svg>'),
     hsl(0, 0%, 96%);
     background-size: 40px;
+}
+
+.bday-wish-section {
+  /* background-color: #097770; */
+  background-color: #efefef;
+  color: white;
+  flex-direction: column;
+  /* background-image: url('https://images.pexels.com/photos/5725882/pexels-photo-5725882.jpeg'); */
+}
+
+.bday-wish-section h1 {
+  order: 2;
+  font-family: 'poppins', sans-serif;
+  font-size: 10vw;
+  text-transform: uppercase;
+  background: url('https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174065_960_720.png');
+  background-size: contain;
+  -webkit-background-clip: text;
+  color: transparent;
+  
+}
+
+.bday-wish-section .tl-decoration {
+  position: absolute;
+  width: 30px;
+  top: 0;
+  left: 0.5rem;
+}
+
+.bday-wish-section .bl-decoration {
+  position: absolute;
+  width: 100px;
+  bottom: 0;
+  left: 0.5rem;
+}
+
+.bday-wish-section .br-decoration {
+  position: absolute;
+  width: 70px;
+  bottom: 0;
+  right: 0;
 }
 
 .bday-card-section {
@@ -161,6 +204,22 @@ section:not(:last-of-type)::after {
 /* ==== Candle Alignment End*/
 
 /* candle end */
+
+
+.ml4 {
+  position: relative;
+  font-weight: 900;
+  font-size: 4.5em;
+}
+.ml4 .letters {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0.3em;
+  right: 0;
+  opacity: 0; 
+}
+
 
 
 .ml16 {

@@ -7,8 +7,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./card.css">
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+
 
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+
 
 </head>
 
@@ -19,10 +23,62 @@
     </section>
 
     <section>
-        <h1
-            style="background: linear-gradient(to right, #30CFD0 0%, #330867 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 5rem;">
+        <ul id="elasticstack" class="elasticstack">
+            <li><img src="" alt="01" />
+                <h5>anshu</h5>
+            </li>
+            <li><img src="" alt="02" />
+                <h5>Tuqburni</h5>
+            </li>
+            <li><img src="" alt="03" />
+                <h5>Retrouvailles</h5>
+            </li>
+            <li><img src="" alt="04" />
+                <h5>Onsra</h5>
+            </li>
+            <li><img src="" alt="05" />
+                <h5>Mamihlapinatapai</h5>
+            </li>
+            <li><img src="" alt="06" />
+                <h5>Koi No Yokan</h5>
+            </li>
+        </ul>
+    </section>
+
+    <section class="bday-wish-section">
+        <h1>
             Happy Birthday
         </h1>
+
+        <img src="./images/cake.png" alt="">
+
+        <!-- Orange Flower -->
+        <img class="tl-decoration" style="top:1rem; left: 1rem;" src="./images/black.png" alt="">
+        <img class="tl-decoration" style="top:1rem; left: 8.5rem;" src="./images/black.png" alt="">
+
+        <!-- Red flower with leaf -->
+        <img class="tl-decoration" style="top:3.5rem; left: 3.5rem;" src="./images/floral.png" alt="">
+
+        <!-- Cherry blossom -->
+        <img class="tl-decoration" style="top:1rem; left: 3.5rem;" src="./images/cherry-blossom.png" alt="">
+
+        <!-- Round Red flower -->
+        <img class="tl-decoration" style="top:1rem; left: 6rem;" src="./images/flower.png" alt="">
+
+        <!-- Pink cosmos -->
+        <img class="tl-decoration" style="top:3.5rem; left: 1rem;" src="./images/pink-cosmos.png" alt="">
+        
+        <!-- Rose -->
+        <img class="tl-decoration" style="top:6rem; left: 1rem;" src="./images/rose.png" alt="">
+
+
+        <img class="bl-decoration" style="width: 200px; left: 0;" src="./images/tree.png" alt="">
+        <img class="bl-decoration" style="width: 150px; bottom: -2rem; left: 10rem;" src="./images/park.png" alt="">
+        <img class="bl-decoration" style="width: 50px; left: 19rem;" src="./images/reeds.png" alt="">
+
+        <img class="br-decoration" src="./images/butterflies.png" alt="">
+        <img class="br-decoration" style="right: 5rem;" src="./images/flowers.png" alt="">
+
     </section>
 
     <section>
@@ -214,9 +270,9 @@
         </div>
     </section>
 
-    <section>
+    <!-- <section>
         <canvas id="birthday"></canvas>
-    </section>
+    </section> -->
 
     <!-- Use media queries to adjust font size for smaller devices -->
     <section style="flex-direction: column;">
@@ -236,12 +292,15 @@
     <script src="https://cdn.rawgit.com/jschr/textillate/master/assets/jquery.lettering.js"></script>
     <script src="https://cdn.rawgit.com/jschr/textillate/master/jquery.textillate.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/shine.js/0.2.7/shine.min.js"
-        integrity="sha512-qqcCgMiPGAtvUSAAErvR6w8Y0/MdKWW1aO2sjg/TVvpO56Z6o1TTsHf+i+nCMxeCxmRbVlzjPnU8FvDNt+8cOA=="
-        crossorigin="anonymous"></script>
+    <script src="js/draggabilly.pkgd.min.js"></script>
+    <script src="js/elastiStack.js"></script>
+
 
     <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        new ElastiStack(document.getElementById('elasticstack'));
+    </script>
 </body>
 
 </html>
