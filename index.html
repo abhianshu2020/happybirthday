@@ -8,12 +8,8 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./card.css">
     <link rel="stylesheet" type="text/css" href="css/component.css" />
-
-
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.25/howler.min.js"></script>
 </head>
 
 <body>
@@ -22,31 +18,13 @@
         <canvas width="500" height="500"></canvas>
     </section>
 
-    <section>
-        <ul id="elasticstack" class="elasticstack">
-            <li><img src="" alt="01" />
-                <h5>anshu</h5>
-            </li>
-            <li><img src="" alt="02" />
-                <h5>Tuqburni</h5>
-            </li>
-            <li><img src="" alt="03" />
-                <h5>Retrouvailles</h5>
-            </li>
-            <li><img src="" alt="04" />
-                <h5>Onsra</h5>
-            </li>
-            <li><img src="" alt="05" />
-                <h5>Mamihlapinatapai</h5>
-            </li>
-            <li><img src="" alt="06" />
-                <h5>Koi No Yokan</h5>
-            </li>
-        </ul>
-    </section>
 
-    <section class="bday-wish-section">
-        <h1>
+
+    <section class="bday-wish-section" style="position: relative;">
+
+        <canvas id="canvas" style="position: absolute;"></canvas>
+
+        <h1 class="happy-birthday-text">
             Happy Birthday
         </h1>
 
@@ -67,13 +45,13 @@
 
         <!-- Pink cosmos -->
         <img class="tl-decoration" style="top:3.5rem; left: 1rem;" src="./images/pink-cosmos.png" alt="">
-        
+
         <!-- Rose -->
         <img class="tl-decoration" style="top:6rem; left: 1rem;" src="./images/rose.png" alt="">
 
 
         <img class="bl-decoration" style="width: 200px; left: 0;" src="./images/tree.png" alt="">
-        <img class="bl-decoration" style="width: 150px; bottom: -2rem; left: 10rem;" src="./images/park.png" alt="">
+        <img class="bl-decoration" style="width: 150px; bottom: -1rem; left: 10rem;" src="./images/park.png" alt="">
         <img class="bl-decoration" style="width: 50px; left: 19rem;" src="./images/reeds.png" alt="">
 
         <img class="br-decoration" src="./images/butterflies.png" alt="">
@@ -81,9 +59,9 @@
 
     </section>
 
-    <section>
+    <section class="candle-section" style="flex-direction: column;">
 
-        <div class="candle-wrapper">
+        <div class="candle-wrapper" style="margin: 5em 0;">
             <div class="candle-container">
                 <div class="velas">
                     <div class="fuego"></div>
@@ -232,18 +210,11 @@
                     <div class="fuego"></div>
                     <div class="fuego"></div>
                     <div class="fuego"></div>
-                </div>
-                <div class="tilted-candle">
-                    <div class="velas ">
-                        <div class="fuego"></div>
-                        <div class="fuego"></div>
-                        <div class="fuego"></div>
-                        <div class="fuego"></div>
-                        <div class="fuego"></div>
-                    </div>
                 </div>
             </div>
         </div>
+
+        <h1 class="ml3" style="text-align: center;">wishing you abundance on your birthday</h1>
 
     </section>
 
@@ -251,33 +222,53 @@
         <div class="card">
             <div class="imgBox">
                 <div class="bark"></div>
-                <img src="https://image.ibb.co/fYzTrb/lastofus.jpg">
+                <!-- <img src="https://image.ibb.co/fYzTrb/lastofus.jpg"> -->
+                <img src="./images/bday/hbd-shubhi.png" alt="happy birthday">
             </div>
             <div class="details">
-                <h4 class="color1">You're not a Fossil! (YET)</h2>
-                    <h4 class="color2 margin">(HAPPY BIRTHDAY)</h3>
+                <h4 class="color1">HAPPY BIRTHDAY</h2>
+                    <h4 class="color2 margin" style="font-size: 18px; margin-bottom: 2rem;">( from the most amazing person you know )</h3>
                         <p>Hey Shubhangi,</p>
-                        <p>...</p>
-                        <p>...</p>
-                        <p>...</p>
-                        <p>...</p>
-                        <p>...</p>
-                        <p>...</p>
-                        <p>...</p>
+                        <p>Way to go! You made it through another</p>
+                        <p>year! I know, right? May this birthday</p>
+                        <p>have you soaring the skies and circling</p>
+                        <p>the stars. Hope your birthday is just</p>
+                        <p>like you... totally freaking awesome 🤗</p>
+                        <p>‎‎‎</p>
+                        <p>Sending you buckets of joy and big</p>
+                        <p>bear hugs on your birthday 🥰</p>
                         <p class="text-right">Happy Birthday, Shubhi!</p>
                         <p class="text-right">♥ Abhi</p>
             </div>
         </div>
     </section>
 
-    <!-- <section>
-        <canvas id="birthday"></canvas>
-    </section> -->
+    <section style="overflow: hidden; background-color: #29011c;">
+        <ul id="elasticstack" class="elasticstack">
+            <li><img src="" alt="01" />
+                <h5>Never want to stop making memories with you</h5>
+            </li>
+            <li><img src="" alt="02" />
+                <h5>Tuqburni</h5>
+            </li>
+            <li><img src="" alt="03" />
+                <h5>Retrouvailles</h5>
+            </li>
+            <li><img src="" alt="04" />
+                <h5>Onsra</h5>
+            </li>
+            <li><img src="" alt="05" />
+                <h5>Mamihlapinatapai</h5>
+            </li>
+            <li><img src="" alt="06" />
+                <h5>Koi No Yokan</h5>
+            </li>
+        </ul>
+    </section>
 
-    <!-- Use media queries to adjust font size for smaller devices -->
-    <section style="flex-direction: column;">
-        <h1 class="ml16">Made with love</h1>
-        <h1 class="ml16"> -ABHI ABHI</h1>
+    <section style="flex-direction: column; background-color: #008577;">
+        <h1 class="ml16" style="color: white">Made with love</h1>
+        <h1 class="ml16" style="color: white"> -ABHI ABHI</h1>
     </section>
 
 
@@ -288,15 +279,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.12.0/umd/react-dom.production.min.js"></script>
     <script type="text/babel" src="./nightSky.js"></script> -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdn.rawgit.com/jschr/textillate/master/assets/jquery.lettering.js"></script>
-    <script src="https://cdn.rawgit.com/jschr/textillate/master/jquery.textillate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"
+        integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g=="
+        crossorigin="anonymous"></script>
+
 
     <script src="js/draggabilly.pkgd.min.js"></script>
     <script src="js/elastiStack.js"></script>
-
-
     <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="js/bdayExplosion.js"></script>
     <script src="./js/script.js"></script>
     <script>
         new ElastiStack(document.getElementById('elasticstack'));
