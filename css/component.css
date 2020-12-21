@@ -68,7 +68,7 @@
 	color: #143f51;
 	height: 60px;
 	text-align: right;
-	font-size: 1.4em;
+	font-size: 1.5em;
 	font-family: "Sacramento", cursive;
 	line-height: 60px;
 }
@@ -84,3 +84,11 @@
 	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.470, 1.515);
 	transition-timing-function: cubic-bezier(0.175, 0.885, 0.470, 1.515);
 }
+
+.elasticstack li .long-text {
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+  }
+  

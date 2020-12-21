@@ -222,7 +222,7 @@ let isBombRunning = false;
 
 let hbdAudio = new Audio("./audio/hbd-bells.mp3")
 let chedkhaniyaAudio = new Audio("./audio/chedkhaniyaan.mp3")
-let firstDateAudio = new Audio("./audio/frad_first_date.mp3")
+let firstDateAudio = new Audio("./audio/memories.mp3")
 let firstDateRunning = false
 
 let shouldAudioPlay = true
@@ -368,7 +368,7 @@ $(function () {
 
       // if (shouldAudioPlay) {
       hbdAudio.loop = true;
-      chedkhaniyaAudio.pause();
+      firstDateAudio.pause();
       hbdAudio.play();
       shouldAudioPlay = false;
       // }
@@ -377,10 +377,10 @@ $(function () {
     if ($(".elasticstack").isInViewport()) {
       if (!firstDateRunning) {
         hbdAudio.pause();
-        setTimeout(() => {
+       // setTimeout(() => {
           firstDateAudio.play();
           
-        }, 1000);
+       // }, 1000);
         firstDateAudio.loop = true;
         firstDateRunning = true
       }
