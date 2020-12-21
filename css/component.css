@@ -59,6 +59,8 @@
 
 .elasticstack li img {
 	display: block;
+	width: 300px;
+	height: 260px;
 }
 
 .elasticstack li h5 {

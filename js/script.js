@@ -220,8 +220,13 @@ let bomb_interval1 = 0;
 let bomb_interval2 = 0;
 let isBombRunning = false;
 
-let hbdAudio = new Audio("./audio/hbd-bells.mp3");
-let shouldAudioPlay = true;
+let hbdAudio = new Audio("./audio/hbd-bells.mp3")
+let chedkhaniyaAudio = new Audio("./audio/chedkhaniyaan.mp3")
+let firstDateAudio = new Audio("./audio/frad_first_date.mp3")
+let firstDateRunning = false
+
+let shouldAudioPlay = true
+let isChedkhaniyaRunning = false
 
 $(function () {
   let animated = false;
@@ -263,7 +268,7 @@ $(function () {
       }
     }
 
-    if ($(".ml3").isInViewport()) {
+    if ($(".candle-section").isInViewport()) {
       if (!candleTextAnimated) {
         const candleTextWrapper = document.querySelector(".ml3");
         candleTextWrapper.innerHTML = candleTextWrapper.textContent.replace(
@@ -287,7 +292,7 @@ $(function () {
             easing: "easeInExpo",
             delay: 1000,
           });
-          candleTextAnimated = !candleTextAnimated
+        candleTextAnimated = !candleTextAnimated;
       }
     }
 
@@ -363,30 +368,67 @@ $(function () {
 
       // if (shouldAudioPlay) {
       hbdAudio.loop = true;
+      chedkhaniyaAudio.pause();
       hbdAudio.play();
       shouldAudioPlay = false;
       // }
+    }
+
+    if ($(".elasticstack").isInViewport()) {
+      if (!firstDateRunning) {
+        hbdAudio.pause();
+        setTimeout(() => {
+          firstDateAudio.play();
+          
+        }, 1000);
+        firstDateAudio.loop = true;
+        firstDateRunning = true
+      }
+    } else {
+      chedkhaniyaAudio.loop = false;
+      firstDateRunning = false
     }
   });
 });
 
 //=========== Script for Made with Love end ===========
 
+console.log(
+  ` 
+%c+-+-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
+%c|H|a|p|p|y| |B|i|r|t|h|d|a|y| |S|h|u|b|h|i|
+%c+-+-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
+`,
+  "font-size: 20px; color: #bc85a3",
+  "color: #9dabdd; font-size: 20px",
+  "color: #bc85a3; font-size: 20px"
+);
 
-console.log(` 
-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
-|H|a|p|p|y| |B|i|r|t|h|d|a|y| |S|h|u|b|h|i|
-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
-`)
+console.log(
+  ` 
+%c+-+-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
+%c|H|a|p|p|y| |B|i|r|t|h|d|a|y| |S|h|u|b|h|i|
+%c+-+-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
+`,
+  "font-size: 20px; color: #8ac0de",
+  "color: #70ae98; font-size: 20px",
+  "color: #8ac0de; font-size: 20px"
+);
 
-console.log(` 
-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
-|H|a|p|p|y| |B|i|r|t|h|d|a|y| |S|h|u|b|h|i|
-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
-`)
+console.log(
+  ` 
+%c+-+-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
+%c|H|a|p|p|y| |B|i|r|t|h|d|a|y| |S|h|u|b|h|i|
+%c+-+-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
+`,
+  "font-size: 20px; color: #fdcf76",
+  "color: #e58b88; font-size: 20px",
+  "color: #fdcf76; font-size: 20px"
+);
 
-console.log(` 
-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
-|H|a|p|p|y| |B|i|r|t|h|d|a|y| |S|h|u|b|h|i|
-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
-`)
+console.log(`
++-+-+-+-+ +-+-+-+-+ +-+-+-+-+-+ +-+-+-+-+-+-+-+ +-+-+ +-+-+-+ +-+-+-+
+|M|a|n|y| |m|a|n|y| |h|a|p|p|y| |r|e|t|u|r|n|s| |o|f| |t|h|e| |d|a|y|
++-+-+-+-+ +-+-+-+-+ +-+-+-+-+-+ +-+-+-+-+-+-+-+ +-+-+ +-+-+-+ +-+-+-+
+
+`);
