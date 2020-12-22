@@ -254,7 +254,7 @@ $(function () {
             targets: ".ml16 .letter",
             translateY: [-100, 0],
             easing: "easeInExpo",
-            duration: 1400,
+            duration: 1500,
             delay: (el, i) => 35 * i,
           })
           .add({
@@ -299,7 +299,6 @@ $(function () {
     // ================
 
     if ($(".happy-birthday-text").isInViewport && !bdayExplosionAnimated) {
-      console.log("first explosion started");
       for (let i = 1; i < 50; i++)
         setTimeout(() => {
           startDoubleExplosion(
@@ -321,10 +320,8 @@ $(function () {
     }
 
     if (!$(".happy-birthday-text").isInViewport()) {
-      debugger;
-      console.log("Element is NOT visible. is bomb running: ", isBombRunning);
+
       if (isBombRunning) {
-        console.log("interval stopped");
         clearInterval(bomb_interval1);
         clearInterval(bomb_interval2);
         isBombRunning = false;
@@ -335,12 +332,9 @@ $(function () {
     }
 
     if ($(".happy-birthday-text").isInViewport()) {
-      // code to blast firework at random intervals
-      debugger;
-      console.log("Element is visible. is bomb running: ", isBombRunning);
+
+      // code to blast firework at random intervals            
       if (!isBombRunning) {
-        console.log("interval started");
-        // setTimeout(() => {
         bomb_interval1 = setInterval(() => {
           const x = randomFloat(00, document.body.clientWidth);
           const y = randomFloat(0, window.innerHeight / 2);
@@ -362,7 +356,6 @@ $(function () {
           startDoubleExplosion(x3, y3);
           startDoubleExplosion(x4, y4);
         }, randomFloat(500, 1500));
-        // }, 50 * 0.1 * 1000);
         isBombRunning = true;
       } // end of setting interval
 

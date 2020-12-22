@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap");
 
-body, html {
+body,
+html {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -35,7 +36,7 @@ section {
 }
 
 section:not(:last-of-type)::after {
-  content: url('./images/down-arrow.png');
+  content: url("./images/down-arrow.png");
   position: absolute;
   bottom: 1rem;
 }
@@ -43,7 +44,14 @@ section:not(:last-of-type)::after {
 .star-section {
   background: url('data:image/svg+xml;utf8,<svg opacity="0.15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15" width="160" height="150"><g transform="translate(1 1)" stroke-width="2" stroke="%23ffc928" stroke-linecap="round" stroke-linejoin="round" fill="%23ffc928"><path d="M 0 4.5 l 4.5 0 l 2.5 -4.5 l 2.5 4.5 l 4.5 0 l -3.5 3.5 l 1.5 5 l -5 -2.5 l -5 2.5 l 1.5 -5 l -3.5 -3.5"></path></g></svg>'),
     hsl(0, 0%, 96%);
-    background-size: 40px;
+  background-size: 40px;
+}
+
+.star-section img {
+
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
 .candle-section {
@@ -62,15 +70,14 @@ section:not(:last-of-type)::after {
 .bday-wish-section h1 {
   order: 2;
   /* font-family: 'poppins', sans-serif; */
-  font-family: 'Balsamiq Sans', cursive;
+  font-family: "Balsamiq Sans", cursive;
   font-size: 10vw;
   text-transform: uppercase;
-  background: url('https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174065_960_720.png');
+  background: url("https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174065_960_720.png");
   /* background: url('https://image.freepik.com/free-vector/gradient-dynamic-geometric-shapes-background_52683-19148.jpg'); */
   background-size: contain;
   -webkit-background-clip: text;
   color: transparent;
-  
 }
 
 .bday-wish-section .tl-decoration {
@@ -100,9 +107,7 @@ section:not(:last-of-type)::after {
 }
 /*  */
 
-
 /* candle */
-
 
 .velas {
   background: #ffffff;
@@ -168,7 +173,8 @@ section:not(:last-of-type)::after {
 */
 
 @keyframes fuego {
-  0%, 100% {
+  0%,
+  100% {
     background: rgba(254, 248, 97, 0.5);
     box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
     transform: translateY(0) scale(1);
@@ -203,7 +209,6 @@ section:not(:last-of-type)::after {
   transform: rotate(90deg);
   position: absolute;
   left: 1rem;
-
 }
 
 .tilted-candle .velas {
@@ -220,21 +225,50 @@ section:not(:last-of-type)::after {
 }
 
 .ml16 {
-    color: #402d2d;
-    padding: 40px 0;
-    font-weight: 800;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 0.5em;
-    overflow: hidden;
-  }
-  
-  .ml16 .letter {
-    display: inline-block;
-    line-height: 1em;
-  }
+  color: #402d2d;
+  padding: 40px 0;
+  font-weight: 800;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  overflow: hidden;
+}
 
+.ml16 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
 
-  #canvas {
-    z-index: 2;
-  }
+#canvas {
+  z-index: 2;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+/* body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+} */
+
+body::-webkit-scrollbar-thumb {
+  background-color: #999;
+  /* outline: 1px solid green; */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  color: white;
+
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}

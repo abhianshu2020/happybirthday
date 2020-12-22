@@ -7,7 +7,8 @@
     <meta name="description"
         content="I'm so fricking happy you were born. Happy Birthday to the one I can actually tolerate. Wish you many many happy returns of the day, Shubhi!!">
 
-    <meta property="og:image" content="https://i2.wp.com/www.onlinecakencr.com/image/cache/catalog/Designer%20Cake/red%20rose%20cake-250x250.png">
+    <meta property="og:image"
+        content="https://i2.wp.com/www.onlinecakencr.com/image/cache/catalog/Designer%20Cake/red%20rose%20cake-250x250.png">
 
     <title>Happy Birthday Shubhangi</title>
     <link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/1404/1404940.svg" type="image/gif"
@@ -24,6 +25,7 @@
     <!-- canvas in which to draw the star -->
     <section class="star-section">
         <canvas width="500" height="500"></canvas>
+        <img src="./images/fullscreen.png" alt="" onclick="goFullScreen()" style="opacity: 0.8;">
     </section>
 
     <section class="bday-wish-section" style="position: relative;">
@@ -262,7 +264,7 @@
                 <h5>a kid hiding lots of maturity inside</h5>
             </li>
             <li><img src="./images/us/last_second_in_bus.jpg" alt="02" />
-                <h5>shishya ko Anshu baba ka aashirwaad</h5>
+                <h5 class="long-text">shishyaa ko Anshu baba ka aashirwaad</h5>
             </li>
             <li><img src="./images/us/queen.jpg" alt="06" />
                 <h5 class="long-text">On this day, a queen was born</h5>
@@ -287,13 +289,23 @@
         <h1 class="ml16" style="color: white"> -ABHI ABHI</h1>
     </section>
 
+    <div class="overlay" onclick="goFullScreen()">click to experience</div>
 
-
-    <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"
-        integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g=="
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
 
+    <script>
+        if (localStorage.getItem('isFirstExperienceDone')) {
+            debugger
+            $('.overlay').css('display', 'none')
+        }
+    </script>
+
+    <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"
+        integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g=="
+        crossorigin="anonymous"></script> -->
 
     <script src="js/draggabilly.pkgd.min.js"></script>
     <script src="js/elastiStack.js"></script>
@@ -302,6 +314,16 @@
     <script src="./js/script.js"></script>
     <script>
         new ElastiStack(document.getElementById('elasticstack'));
+
+        function goFullScreen() {
+            if (document.fullscreen) {
+                document.exitFullscreen()
+                return
+            }
+            $('.overlay').fadeOut(2500)
+            document.documentElement.requestFullscreen()
+            localStorage.setItem('isFirstExperienceDone', true)
+        }
     </script>
 </body>
 
