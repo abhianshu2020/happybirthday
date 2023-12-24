@@ -425,3 +425,5 @@ console.log(`
 +-+-+-+-+ +-+-+-+-+ +-+-+-+-+-+ +-+-+-+-+-+-+-+ +-+-+ +-+-+-+ +-+-+-+
 
 `);
+
+console.log(`You don’t look a day over 16! From a distance, with my eyes closed. Happy birthday!`, "color: #70ae98; font-size: 20px",)
